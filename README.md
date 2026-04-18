@@ -1,4 +1,4 @@
-## Solar Radiation Forecasting and Weather Impact Analysis – Telangana
+
 ## About the Data
 
 The dataset used in this project contains long-term **daily meteorological and solar radiation data** for Telangana, India. It spans more than four decades, providing rich information about atmospheric conditions and solar energy patterns.
