@@ -29,8 +29,8 @@ The dataset includes:
 - Total Cloud Cover  
 - UTCI  
 
-📅 Time Period: 1979 – 2024  
-📈 Frequency: Monthly aggregated data  
+Time Period: 1979 – 2024  
+Frequency: Monthly aggregated data  
 
 ---
 
