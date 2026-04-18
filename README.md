@@ -1,11 +1,17 @@
-# Solar Radiation Forecasting and Weather Impact Analysis – Telangana
+# 🌞 Solar Radiation Forecasting and Weather Impact Analysis – Telangana
 
-# Overview
-This project focuses on analyzing and forecasting solar radiation using time series models and LSTM. It also studies the impact of weather variables such as temperature, cloud cover, and wind on solar radiation.
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
+![Domain](https://img.shields.io/badge/Domain-Time%20Series-orange)
 
 ---
 
-# Objectives
+## 📌 Project Overview
+This project focuses on analyzing and forecasting solar radiation using **time series models and deep learning techniques**. It also investigates the impact of meteorological variables such as temperature, cloud cover, and wind on solar radiation.
+
+---
+
+## 🎯 Objectives
 - Analyze long-term solar radiation patterns  
 - Identify trend and seasonality  
 - Forecast future solar radiation values  
@@ -13,52 +19,86 @@ This project focuses on analyzing and forecasting solar radiation using time ser
 
 ---
 
-# Dataset
-The dataset contains long-term meteorological observations:
+## 📊 Dataset Description
+The dataset includes:
 
-- Surface Solar Radiation (min, mean, max)  
+- Surface Solar Radiation (target variable)  
 - Temperature (2m)  
 - Dew Point Temperature  
 - Wind Components (U & V)  
 - Total Cloud Cover  
 - UTCI  
- Time Period: 1979 – 2024  
-Frequency: Monthly aggregated data  
+
+📅 Time Period: 1979 – 2024  
+📈 Frequency: Monthly aggregated data  
 
 ---
 
-# Data Preprocessing
+## 🔄 Project Workflow
+
+1. Problem Definition  
+2. Data Collection  
+3. Data Preprocessing  
+4. Exploratory Data Analysis (EDA)  
+5. Stationarity Testing (ADF Test)  
+6. Feature Selection  
+7. Model Building (SARIMA, SARIMAX, LSTM)  
+8. Model Evaluation  
+9. Residual Analysis  
+10. Forecasting  
+11. Results & Interpretation  
+
+---
+
+## 🔧 Data Preprocessing
 - Converted date column to datetime index  
 - Handled missing values using interpolation  
-- Aggregated daily data into monthly values  
+- Aggregated daily data into monthly averages  
 
 ---
 
-# Exploratory Data Analysis
-- Identified strong seasonal patterns  
-- Observed relationships:
+## 📈 Exploratory Data Analysis
+- Strong seasonal patterns observed  
+- Key relationships:
   - Solar radiation ↑ with temperature  
   - Solar radiation ↓ with cloud cover  
 
 ---
 
-# Models Used
+## 📊 Stationarity Check (ADF Test)
 
-# 1. SARIMA
-- Captures trend and seasonality  
-- Univariate model  
+- ADF Statistic = **-11.21**  
+- p-value = **~0**
 
-# 2. SARIMAX  (Best Model)
-- Includes exogenous variables  
-- Captures weather impact  
-
-# 3. LSTM
-- Deep learning model  
-- Captures nonlinear patterns  
+👉 The series is **stationary**, suitable for ARIMA models  
 
 ---
 
-# Model Performance
+## 🧠 Models Used
+
+### 🔹 SARIMA
+- Captures trend and seasonality  
+- Univariate model  
+
+---
+
+### 🔹 SARIMAX ⭐ (Best Model)
+- Includes exogenous variables (weather data)  
+- Captures external influence  
+
+**Why best?**
+> Solar radiation depends on atmospheric conditions → SARIMAX models this relationship  
+
+---
+
+### 🔹 LSTM
+- Deep learning model  
+- Captures nonlinear patterns  
+- Uses sequential learning  
+
+---
+
+## 📊 Model Evaluation
 
 | Model   | MAE        | RMSE       |
 |--------|-----------|-----------|
@@ -68,32 +108,55 @@ Frequency: Monthly aggregated data
 
 ---
 
-# Key Insights
-- SARIMAX performed best due to inclusion of weather variables  
-- Solar radiation is strongly influenced by atmospheric conditions  
-- Seasonal patterns are consistent over time  
+## 📉 Error Interpretation
+
+> High MAE and RMSE values are due to large data scale (10⁵–10⁶), not poor model performance.
 
 ---
 
-Note on Errors
-Although MAE and RMSE values appear large, they are proportional to the scale of solar radiation values (10⁵–10⁶), making the model performance acceptable.
+## 📉 Residual Analysis
+- Residuals show random behavior  
+- No strong autocorrelation  
+- Model is statistically valid  
 
-Forecasting
+---
+
+## 🔮 Forecasting
 - Generated 12-month future predictions  
-- Seasonal patterns maintained in forecasts  
+- Seasonal patterns preserved  
 
 ---
 
-# Future Work
-- Include more variables (humidity, rainfall)  
-- Improve LSTM performance  
-- Apply advanced models like Prophet  
+## 📊 Key Insights
+- SARIMAX performed best  
+- Weather variables significantly improve predictions  
+- Solar radiation strongly depends on atmospheric conditions  
 
 ---
 
-# Tech Stack
+## 📷 Visualizations
+
+### Time Series Plot
+![Time Series](images/timeseries.png)
+
+### ACF & PACF
+![ACF PACF](images/acf_pacf.png)
+
+### Forecast vs Actual
+![Forecast](images/forecast.png)
+
+---
+
+## 🛠️ Tech Stack
 - Python  
 - Pandas, NumPy  
 - Matplotlib, Seaborn  
 - Statsmodels  
 - TensorFlow / Keras  
+
+---
+
+## 📁 Project Structure
+ 
+
+
