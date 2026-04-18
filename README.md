@@ -1,4 +1,4 @@
-# 🌞 Solar Radiation Forecasting and Weather Impact Analysis – Telangana
+#  Solar Radiation Forecasting and Weather Impact Analysis – Telangana
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
@@ -6,12 +6,12 @@
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 This project focuses on analyzing and forecasting solar radiation using **time series models and deep learning techniques**. It also investigates the impact of meteorological variables such as temperature, cloud cover, and wind on solar radiation.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 - Analyze long-term solar radiation patterns  
 - Identify trend and seasonality  
 - Forecast future solar radiation values  
@@ -19,7 +19,7 @@ This project focuses on analyzing and forecasting solar radiation using **time s
 
 ---
 
-## 📊 Dataset Description
+## Dataset Description
 The dataset includes:
 
 - Surface Solar Radiation (target variable)  
@@ -34,7 +34,7 @@ The dataset includes:
 
 ---
 
-## 🔄 Project Workflow
+## Project Workflow
 
 1. Problem Definition  
 2. Data Collection  
@@ -50,14 +50,14 @@ The dataset includes:
 
 ---
 
-## 🔧 Data Preprocessing
+## Data Preprocessing
 - Converted date column to datetime index  
 - Handled missing values using interpolation  
 - Aggregated daily data into monthly averages  
 
 ---
 
-## 📈 Exploratory Data Analysis
+##  Exploratory Data Analysis
 - Strong seasonal patterns observed  
 - Key relationships:
   - Solar radiation ↑ with temperature  
@@ -65,24 +65,23 @@ The dataset includes:
 
 ---
 
-## 📊 Stationarity Check (ADF Test)
+# Stationarity Check (ADF Test)
 
 - ADF Statistic = **-11.21**  
 - p-value = **~0**
-
-👉 The series is **stationary**, suitable for ARIMA models  
+ The series is **stationary**, suitable for ARIMA models  
 
 ---
 
-## 🧠 Models Used
+## Models Used
 
-### 🔹 SARIMA
+### SARIMA
 - Captures trend and seasonality  
 - Univariate model  
 
 ---
 
-### 🔹 SARIMAX ⭐ (Best Model)
+### SARIMAX (Best Model)
 - Includes exogenous variables (weather data)  
 - Captures external influence  
 
@@ -91,14 +90,14 @@ The dataset includes:
 
 ---
 
-### 🔹 LSTM
+### LSTM
 - Deep learning model  
 - Captures nonlinear patterns  
 - Uses sequential learning  
 
 ---
 
-## 📊 Model Evaluation
+## Model Evaluation
 
 | Model   | MAE        | RMSE       |
 |--------|-----------|-----------|
@@ -108,46 +107,33 @@ The dataset includes:
 
 ---
 
-## 📉 Error Interpretation
+## Error Interpretation
 
 > High MAE and RMSE values are due to large data scale (10⁵–10⁶), not poor model performance.
 
 ---
 
-## 📉 Residual Analysis
+## Residual Analysis
 - Residuals show random behavior  
 - No strong autocorrelation  
 - Model is statistically valid  
 
 ---
 
-## 🔮 Forecasting
+## Forecasting
 - Generated 12-month future predictions  
 - Seasonal patterns preserved  
 
 ---
 
-## 📊 Key Insights
+## Key Insights
 - SARIMAX performed best  
 - Weather variables significantly improve predictions  
 - Solar radiation strongly depends on atmospheric conditions  
 
 ---
 
-## 📷 Visualizations
-
-### Time Series Plot
-![Time Series](images/timeseries.png)
-
-### ACF & PACF
-![ACF PACF](images/acf_pacf.png)
-
-### Forecast vs Actual
-![Forecast](images/forecast.png)
-
----
-
-## 🛠️ Tech Stack
+## Tech Stack
 - Python  
 - Pandas, NumPy  
 - Matplotlib, Seaborn  
@@ -155,8 +141,37 @@ The dataset includes:
 - TensorFlow / Keras  
 
 ---
-images/
-## 📁 Project Structure
+
+---
+
+## Limitations
+- Limited external variables  
+- LSTM not fully optimized  
+- Assumes historical patterns continue  
+
+---
+
+## Future Work
+- Add humidity and rainfall  
+- Improve LSTM tuning  
+- Apply advanced models (Prophet, XGBoost)  
+
+---
+
+## Author
+**Ramavath Ganesh**  
+M.Sc. Statistics (2024–2026)  
+Banaras Hindu University  
+
+---
+
+## GitHub Profile
+https://github.com/gani910050  
+
+---
+
+##  Support
+If you found this project useful, consider giving it a ⭐
  
 
 
